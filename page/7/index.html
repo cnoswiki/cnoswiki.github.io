@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>开源百科</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta property="og:type" content="website">
+<meta property="og:title" content="开源百科">
+<meta property="og:url" content="http://example.com/page/7/index.html">
+<meta property="og:site_name" content="开源百科">
+<meta property="og:locale">
+<meta name="twitter:card" content="summary">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+</script>
+
+
+  <body>
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="开源百科" rel="home"> 开源百科 </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main">
+  
+    <article id="post-the-start-the-oracle-command-under-linux"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2012/03/04/the-start-the-oracle-command-under-linux/">linux下oracle常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2012/03/04/the-start-the-oracle-command-under-linux/" class="article-date">
+	  <time datetime="2012-03-04T00:59:11.000Z" itemprop="datePublished">March 4, 2012</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、启动</p>
+<pre class="lang:default decode:true ">#su - oracle 切换到oracle用户且切换到它的环境
+$lsnrctl status 查看监听及数据库状态
+$lsnrctl start 启动监听
+$sqlplus /nolog 进入sqlplus
+SQL&gt;conn / as sysdba 以DBA身份登录
+SQL&gt;startup 启动db</pre>
+<p>二、停止</p>
+<pre class="lang:default decode:true ">#su - oracle 切换到oracle用户且切换到它的环境
+$lsnrctl stop 停止监听
+$sqlplus /nolog 进入sqlplus
+SQL&gt;conn / as sysdba 以DBA身份登录
+SQL&gt;SHUTDOWN IMMEDIATE 关闭db</pre>
+<p>其中startup和shutdowm还有其他一些可选参数，有兴趣可以另行查阅</p>
+<p>三、查看初始化参数及修改</p>
+<pre class="lang:default decode:true ">#su - oracle 切换到oracle用户且切换到它的环境
+$sqlplus / as sysdba 进入sqlplus
+SQL&gt;conn / as sysdba 以DBA身份登录
+SQL&gt;show parameter session; 查看所接受的session数量
+SQL&gt;alter system set shared_servers=10; 将shared_servers的数量设置为10</pre>
+<p>四．数据库连接数目<br>其中一个数据库连接需要一个session,它的值由processes决定，session与processes通常有以下关系：</p>
+<pre class="lang:default decode:true ">session = 1.1 * processes + 5</pre>
+<p>a、以sysdba身份登陆PL/SQL 或者 Worksheet<br>b、查询目前连接数</p>
+<pre class="lang:default decode:true ">show parameter processes;</pre>
+<p>c、更改系统连接数</p>
+<pre class="lang:default decode:true ">alter system set processes=1000 scope=spfile;</pre>
+<p>d、创建pfile</p>
+<pre class="lang:default decode:true ">create pfile from spfile;</pre>
+<p>e、重启Oracle服务或重启Oracle服务器<br>不过这也不是绝对的，还要受到CPU和内存等硬件条件的限制。另外 processes和session不可以通过alter system语句直接修改，只可以修改服务器参数文件来更改(Server Parameter File)。如果存在一个server parameter file，通过alter system语句所作的更改将会被持久化到文件中。<br>五、查询Oracle游标使用情况的方法</p>
+<pre class="lang:default decode:true ">select * from v$open_cursor where user_name = 'TRAFFIC'；</pre>
+<p>六、查询Oracle会话的方法</p>
+<pre class="lang:default decode:true ">select * from v$session</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/" rel="tag">oracle</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-linux-view-ports-in-use-turn-off-the-port-method"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2012/03/01/linux-view-ports-in-use-turn-off-the-port-method/">Linux查看端口使用状态、关闭端口方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2012/03/01/linux-view-ports-in-use-turn-off-the-port-method/" class="article-date">
+	  <time datetime="2012-02-29T23:33:21.000Z" itemprop="datePublished">March 1, 2012</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前提：首先你必须知道，端口不是独立存在的，它是依附于进程的。某个进程开启，那么它对应的端口就开启了，进程关闭，则该端口也就关闭了。下次若某个进程再次开启，则相应的端口也再次开启。而不要纯粹的理解为关闭掉某个端口，不过可以禁用某个端口。</p>
+<p>1. 可以通过</p>
+<pre class="brush:other">netstat -anp</pre>
+<p>来查看哪些端口被打开。<br>（注：加参数’-n’会将应用程序转为端口显示，即数字格式的地址，如：nfs-&gt;2049, ftp-&gt;21，因此可以开启两个终端，一一对应一下程序所对应的端口号）<br>2. 然后可以通过</p>
+<pre class="brush:other">lsof -i:$PORT</pre>
+<p>查看应用该端口的程序（$PORT指对应的端口号）。或者你也可以查看文件/etc/services，从里面可以找出端口所对应的服务。<br>（注：有些端口通过netstat查不出来，更可靠的方法是”~$ sudo nmap -sT -O localhost”）<br>3. 若要关闭某个端口，则可以：<br>1)通过iptables工具将该端口禁掉，如：</p>
+<pre class="brush:other">sudo iptables -A INPUT -p tcp --dport $PORT -j DROP
+sudo iptables -A OUTPUT -p tcp --dport $PORT -j DROP</pre>
+<p>2)或者关掉对应的应用程序，则端口就自然关闭了，如：</p>
+<pre class="lang:default decode:true ">kill -9 PID #(PID：进程号)</pre>
+<p>如：通过</p>
+<pre class="brush:other">netstat -anp | grep ssh</pre>
+<p>有显示：</p>
+<pre class="brush:other">tcp 0 127.0.0.1:2121 0.0.0.0:* LISTEN 7546/ssh</pre>
+<p>则：</p>
+<pre class="brush:other">kill -9 7546</pre>
+<p>（可通过”~$ chkconfig”查看系统服务的开启状态）</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3%E6%96%B9%E6%B3%95/" rel="tag">关闭端口方法</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-centos-5-5-install-oracle-11gr2-and-start-with-the-system"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2012/02/25/centos-5-5-install-oracle-11gr2-and-start-with-the-system/">CentOS 5.5 安装 Oracle 11gR2 并随系统启动</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2012/02/25/centos-5-5-install-oracle-11gr2-and-start-with-the-system/" class="article-date">
+	  <time datetime="2012-02-25T07:59:45.000Z" itemprop="datePublished">February 25, 2012</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>**一.安装环境&amp;&amp;相关约定 **<br>system:CentOS 5.5<br>oracle version: Oracle 11gR2<br>基本需求：<br>物理内存大小：至少1G<br>SWAP：最好达到3G以上<br>oracle安装目录:/oracle<br>安装包：安装包有两个包，一定要解压到一个目录下，即database目录下。<br>**二.安装准备工作 **<br>1)固定IP地址（这点很重要，一定要固定IP）<br>2）安装依赖包<br>在CentOS下Oracle 11gR2依赖的包：<br>binutils-2.17.50.0.6-2.el5<br>compat-libstdc++-33-3.2.3-61<br>elfutils-libelf-0.125-3.el5<br>elfutils-libelf-devel-0.125<br>glibc-2.5-12<br>glibc-common-2.5-12<br>glibc-devel-2.5-12<br>glibc-headers-2.5-12<br>gcc-4.1.1-52<br>gcc-c++-4.1.1-52<br>libaio-0.3.106<br>libaio-devel-0.3.106<br>libgcc-4.1.1-52<br>libstdc++-4.1.1<br>libstdc++-devel-4.1.1-52.e15<br>make-3.81-1.1<br>numactl-devel-0.9.8.i386<br>sysstat-7.0.0<br>检查以上包是否有安装，没有就安装之。<br>yum -y install binutils compat-libstdc++-33 elfutils-libelf elfutils-libelf-devel glibc glibc-common glibc-devel gcc gcc-c++ libaio-devel libaio libgcc libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel pdksh numactl-devel glibc-headers</p>
+<p>(如果有报错现 yum clean all)<br>**三.修改内核参数 **</p>
+<pre class="lang:default decode:true ">#vi /etc/sysctl.conf
+#oracle settings
+fs.file-max = 6815744
+kernel.shmall = 2097152 不用改
+kernel.shmmax = 2147483648 不用改
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+fs.aio-max-nr = 1048576
+
+没有的可以加在最后
+修改完毕执行
+#sysctl -p //让上面的修改生效</pre>
+<p>**四.修改/etc/security/limits.conf **</p>
+<pre class="lang:default decode:true ">#oracle settings
+oracle soft nproc 2047
+oracle hard nproc 16384
+oracle soft nofile 1024
+oracle hard nofile 65536</pre>
+<p>**五.修改系统版本（Redhat 5.×系列系统略过这步） **</p>
+<pre class="lang:default decode:true ">#cp /etc/redhat-release /etc/redhat-release.bk
+#vi /etc/redhat-release
+修改内容为：
+Red Hat Enterprise Linux AS release 5 (Taroon)
+&lt;strong&gt;&lt;/strong&gt;</pre>
+<p>**六.修改/etc/pam.d/login **</p>
+<pre class="lang:default decode:true ">添加以下内容：
+session required /lib/security/pam_limits.so
+session required pam_limits.so</pre>
+<p>**七.修改/etc/profile **</p>
+<pre class="lang:default decode:true ">添加以下内容：
+if [ $USER = "oracle" ]; then
+if [ $SHELL = "/bin/ksh" ]; then
+ulimit -p 16384
+ulimit -n 65536
+else
+ulimit -u 16384 -n 65536
+fi
+fi
+添加到 vi /etc/csh.login 以下内容:
+if ( $USER == "oracle" ) then
+limit maxproc 16384
+limit deors 65536
+endif</pre>
+<p>**八.创建相关用户 **</p>
+<pre class="lang:default decode:true ">groupadd oinstall
+groupadd dba
+useradd -g oinstall -G dba oracle
+passwd oracle
+&lt;strong&gt;&lt;/strong&gt;</pre>
+<p>**九.创建相关目录，并赋予对应权限 **</p>
+<pre class="lang:default decode:true ">mkdir -p /oracle/app/oracle/product/
+chown -R oracle:oinstall /oracle/
+chmod -R 775 /oracle/
+&lt;strong&gt;&lt;/strong&gt;</pre>
+<p>**十.设置oracle用户相关变量 **</p>
+<pre class="lang:default decode:true">#su – oracle
+$ vi .bash_profile
+添加以下内容：
+ORACLE_BASE=/oracle/app/oracle
+export ORACLE_BASE
+ORACLE_HOME=$ORACLE_BASE/product/11.1.0/db_1
+export ORACLE_HOME
+ORACLE_SID=ORCL
+export ORACLE_SID
+ORACLE_TERM=xterm
+export ORACLE_TERM
+TNS_ADMIN=$ORACLE_HOME/network/admin
+export TNS_ADMIN
+PATH=$ORACLE_HOME/bin:$PATH
+export PATH
+LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+export LD_LIBRARY_PATH
+CLASSPATH=$ORACLE_HOME/jdk/jre:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+export CLASSPATH
+ORACLE_UNQNAME=$ORACLE_SID export ORACLE_UNQNAME
+umask 022
+$source .bash_profile
+$exit</pre>
+<p>**十一.开始安装 **</p>
+<pre class="lang:default decode:true ">#xhost + (这里使用root用户执行,一定要执行以下2步，如果没有执行，将无法启动图形安装界面)
+#xhost + localhost
+#su – oralce
+$./runInstaller (到oracle安装文件所在目录执行该命令)</pre>
+<p>**十二.安装过程中注意事项 **</p>
+<pre class="lang:default decode:true ">1)第一步是让你填支持的邮箱，不填也可以，会报错，直接略过即可。
+2）接下来就一步步的点下一步即可。
+3）到检验系统内存，swap大小，依赖包以及内核参数设定是否正确时，更据提示去满足他的需求即可。最好不要轻易略过。
+4）下面就是无尽的等待。
+5)vi /ect/profile 最后加上 source /home/oracle/.bash_profile （可以不加）</pre>
+<p>**十三.开机启动设置 **</p>
+<pre class="lang:default decode:true ">1）vi /oracle/app/oracle/product/11.1.0/db_1/bin/dbstart
+ORACLE_HOME_LISTNER=$1
+修改为：
+
+ORACLE_HOME_LISTNER=$ORACLE_HOME
+2)vi /oracle/app/oracle/product/11.1.0/db_1/bin/dbshut
+
+ORACLE_HOME_LISTNER=$1
+修改为：
+ORACLE_HOME_LISTNER=$ORACLE_HOME
+3)编写开机启动文件
+#vi /etc/init.d/oracle
+添加以下内容：
+#!/bin/sh
+# chkconfig: 345 61 61
+# description: Oracle 11g AutoRun Services
+# /etc/init.d/oracle
+#
+# Run-level Startup script for the Oracle Instance, Listener, and
+# Web Interface
+export ORACLE_BASE=/oracle/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/11.1.0/db_1
+export ORACLE_SID=ORCL
+export PATH=$PATH:$ORACLE_HOME/bin
+ORA_OWNR=oracle
+# if the executables do not exist — display error
+if [ ! -f $ORACLE_HOME/bin/dbstart -o ! -d $ORACLE_HOME ]
+then
+echo "Oracle startup: cannot start"
+exit 1
+fi
+# depending on parameter — startup, shutdown, restart
+# of the instance and listener or usage display
+case "$1" in
+start)
+# Oracle listener and instance startup
+su $ORA_OWNR -lc $ORACLE_HOME/bin/dbstart
+echo "Oracle Start Succesful!OK."
+;;
+stop)
+# Oracle listener and instance shutdown
+su $ORA_OWNR -lc $ORACLE_HOME/bin/dbshut
+echo "Oracle Stop Succesful!OK."
+;;
+reload|restart)
+$0 stop
+$0 start
+;;
+*)
+echo $”Usage: `basename $0` {start|stop|reload|reload}”
+exit 1
+esac
+exit 0
+
+#chmod 750 /etc/init.d/oracle
+#ln -s /etc/init.d/oracle /etc/rc1.d/K61oracle
+#ln -s /etc/init.d/oracle /etc/rc3.d/S61oracle
+#chkconfig --level 345 oracle on
+#chkconfig --add oracle
+[root@localhost init.d]# service oracle start
+Processing Database instance “orcl”: log file /oracle/app/oracle/product/11.1.0/db_1/startup.log
+Oracle Start Succesful!OK.
+[root@localhost init.d]# service oracle stop
+Processing Database instance “orcl”: log file /oracle/app/oracle/product/11.1.0/db_1/shutdown.log
+Oracle Stop Succesful!OK.
+这样就可以使用service oracle start/stop来启动oracle，是不是很方便呢？
+开始您的oracle安装之旅吧~
+备注：启动企业管理器命令#emctl start dbconsole 反之停止#emctl stop dbconsole
+
+如果启动有问题/oracle/app/oracle/product/11.1.0/db_1/bin/lsnrctl: error while loading shared libraries: /oracle/app/oracle/product/11.1.0/db_1/lib/libclntsh.so.11.1: cannot restore segment prot after reloc: Permission denied
+执行下面两句
+1.semanage fcontext -a -t textrel_shlib_t /oracle/app/oracle/product/11.1.0/db_1/lib/libclntsh.so.11.1
+
+2.restorecon -R -v /oracle/app/oracle/product/11.1.0/db_1/lib/libclntsh.so.11.1
+如果在执行 startup时报
+ORA-01078: failure in processing system parameters
+LRM-00109: could not open parameter file '/oracle/app/oracle/product/11.1.0/db_1/dbs/initORCL.ora'
+解决方法：(来自http://bbs.chinaunix.net/thread-3605714-1-1.html)
+方法：
+
+$ORACLE_BASE/admin/(dbname) /pfile目录下的init.ora(.01200923383 文件复制到
+
+$ORACLE_HOME/dbs目录下即可
+
+[root@phoneDB pfile]# pwd
+/home/oracle/admin/phone/pfile
+[root@phoneDB pfile]# ls
+init.ora.010200882414
+[root@phoneDB pfile]#
+[root@phoneDB dbs]# pwd
+/home/oracle/10.2.0/db_1/dbs
+[root@phoneDB dbs]# ls
+hc_phone.dat init.ora lkPHONE spfilephone.ora
+initdw.ora init.ora.010200882414 orapwphone
+
+#cp init.ora.010200882414 initORCL.ora'
+来源：http://www.ayio.net/32.html
+
+Oracle 其他用户可以登录，sys用户登录ORA-01031: insufficient privileges
+(http://blog.sina.com.cn/s/blog_6c1151890100opwt.html
+http://blog.sina.com.cn/s/blog_6c1151890100opwq.html
+)
+有同事反映，数据库使用 conn sys/oracle@xxxx as sysdba登录不上去，提示ORA-01031: insufficient privileges，而用户名密码都是完全正确的，不使用@xxx连接符conn / as sysdba登录正常。
+过程：首先判断当前系统采用的是操作系统认证，再使用system/manager@xxxx登录时没有问题，只有使用sysdba权限的用户登录才会报这种错误。接下来进行 grant sysdba to scott; 报错，ORA-01994: GRANT failed: password file missing or disabled。注意，问题就在这里，系统提示密码文件问题。查找$ORACLE_HOME/dbs下的orapwSID文件，发现存在。
+原因：orapwdorcl不正确，应该为orapwORCL，实例名应大写，安装时输入的实例名为小写造成。</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/CentOS/">CentOS</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oracle%E5%AE%89%E8%A3%85/" rel="tag">Oracle安装</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-google-chrome-upcoming-android-platform-version"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2011/10/02/google-chrome-upcoming-android-platform-version/">Google Chrome 即将推出 Android 平台版本</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2011/10/02/google-chrome-upcoming-android-platform-version/" class="article-date">
+	  <time datetime="2011-10-02T03:51:27.000Z" itemprop="datePublished">October 2, 2011</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>来自谷歌的开发者博客显示谷歌第一个 Android 版本的 Chrome 即将推出。歌已经为该浏览器设置了新的构建目标，新的浏览器将演变成一个强大的跨平台应用程序，可以帮助谷歌积极推动 Chrome 作为一种游戏和娱乐平台的浏览器。</p>
+<p>谷歌将很快统一其浏览器平台，支持包括 Android、Chrome OS、Windows、Linux 和 Mac OS。上个星期一，谷歌发布了 Chrome 的 Android 构建目标修订版。而 Android 平台上的 UI 也已经在上周六完成，我们还得知 Chrome for Android 将使用开源的 Skia 2D 图形库作为标准组件，并开始在基于 Webkit 的浏览器上提供 Java 桥接程序。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/" rel="tag">Chrome</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-ubuntu-11-10-beta-2-released"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2011/09/26/ubuntu-11-10-beta-2-released/">Ubuntu 11.10 Beta 2 发布</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2011/09/26/ubuntu-11-10-beta-2-released/" class="article-date">
+	  <time datetime="2011-09-25T16:00:45.000Z" itemprop="datePublished">September 26, 2011</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Ubuntu 11.10 的第二个测试版本已经提供下载，是不是跃跃欲试其新功能了，这只是一个测试版本，所以不推荐作为正式版本使用。你可以制作一张Live CD 或者 usb 启动盘进行测试。</p>
+<p>这是测试版本的主要改变有：</p>
+<div id="news_content">
+
+<ul>
+<li>  全新的Dash；</li>
+<li>  Lenses成为Dash的一部分；</li>
+<li>  Lense细化工具</li>
+<li>  camouflage 被建立在桌面壁纸基础上的Dash, launcher 与 Panel；</li>
+<li>  Unity 桌面以最新发布的 GNOME 3 不稳定版本为基础；</li>
+<li>  还有一些新的应用，如：邮件客户端Thunderbird、备份工具DeJa Dup;</li>
+<li>  全新的登录界面LightDM，默认安装的社交客户端Gwibber;</li>
+<li>*<br>Ubuntu软件中心**<br>新Ubuntu软件中心已进一步完善。填充和对齐问题已经解决，并已修复在Beta 1中发现问题。</li>
+</ul>
+<p><strong>Unity</strong><br>相对于Beta 1已经略微调整了工作区。</p>
+<p>**登录界面LightDM **</p>
+<p>提供了新的应用程序：</p>
+<ul>
+<li>  Firefox 7 Beta</li>
+<li>  Thunderbird 7</li>
+<li>  Shotwell 0.11.1</li>
+<li>  Banshee 2.2.0</li>
+<li>  GNOME 3.1.92<br>其他更多详细信息<a target="_blank" rel="noopener" href="http://www.omgubuntu.co.uk/2011/09/ubuntu-11-10-beta-2-released-reviewed/">可以阅读</a></li>
+</ul>
+<p>下载地址：**<a target="_blank" rel="noopener" href="http://cdimage.ubuntu.com/releases/oneiric/beta-2/">http://releases.ubuntu.com/11.10/</a>**</p>
+</div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/ubuntu/">ubuntu</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu-11-10/" rel="tag">Ubuntu 11.10</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-the-official-version-of-bt-seeds-fedora-download"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2011/09/18/the-official-version-of-bt-seeds-fedora-download/">Fedora官方各版本BT种子下载</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2011/09/18/the-official-version-of-bt-seeds-fedora-download/" class="article-date">
+	  <time datetime="2011-09-18T14:42:16.000Z" itemprop="datePublished">September 18, 2011</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="http://torrent.fedoraproject.org/torrents/">http://torrent.fedoraproject.org/torrents/</a></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fedora%E4%B8%8B%E8%BD%BD/" rel="tag">Fedora下载</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-apple-released-security-update-2011-005-mac-os-x-to-terminate-the-certificate-fraud"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2011/09/10/apple-released-security-update-2011-005-mac-os-x-to-terminate-the-certificate-fraud/">苹果发布Mac OS X安全更新2011-005以终止证书欺诈</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2011/09/10/apple-released-security-update-2011-005-mac-os-x-to-terminate-the-certificate-fraud/" class="article-date">
+	  <time datetime="2011-09-10T07:21:04.000Z" itemprop="datePublished">September 10, 2011</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前全球性的DigiNotar证书被冒用问题引发了全球关注，苹果也因在处理这个问题时吊儿郎当而被安全业界叮得满头包，当地时间周五早晨苹果终于公布了面向Mac OS X 10.7和10.6版本的安全更新，代号2011-005，两个系统的下载容量为别为15.59MB和869KB，推荐所有用户更新。</p>
+<p>苹果对此描述称该更新修正了一个可以让攻击者提升权限的漏洞，实际上它就是之前闹得沸沸扬扬的DigiNotar问题证书的补丁。</p>
+<p><strong>下载:</strong><a target="_blank" rel="noopener" href="http://support.apple.com/kb/DL1447">Security Update 2011-005 (Lion)</a><br><strong>查看:</strong><a target="_blank" rel="noopener" href="http://support.apple.com/kb/DL1446">Security Update 2011-005 (Snow Leopard)</a></p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Mac-OS-X/">Mac OS X</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac-OS-X/" rel="tag">Mac OS X</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-detailed-ubuntu-11-10-of-the-seven-improvement"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2011/09/07/detailed-ubuntu-11-10-of-the-seven-improvement/">详解Ubuntu 11.10的七大改进</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2011/09/07/detailed-ubuntu-11-10-of-the-seven-improvement/" class="article-date">
+	  <time datetime="2011-09-07T15:28:49.000Z" itemprop="datePublished">September 7, 2011</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>新闻来源:华军资讯<br>据国外媒体报道，上周，Canonical发布了Ubuntu 11.10“Oneiric Ocelot”的第一个测试版，并计划于9月22日发布第二个测试版，再于10月13日发布正式版。下面就是Ubuntu 11.10的改进和新功能：</p>
+<p><strong>1****、更小的DVD镜像</strong><br>Ubuntu 11.10 的DVD镜像精简至1.5GB大小，更易于管理，其中包括所有的语言包以及Inkscape、GIMP、PiTiVi和LibreOffice等应用程序。而那些没有包含在DVD镜像中的应用程序仍然归档，并且还会向用户提供传统的CD镜像。</p>
+<p><strong>2****、Ubuntu Core</strong><br>Ubuntu 11.10中包含的新功能还有一系列名为Ubuntu Core的图像，其中包括软件的基本组成部分，适用于定制的Ubuntu桌面和产品。</p>
+<p><strong>3****、改进的32位兼容性</strong><br>目前，Ubuntu 11.10“Oneiric Ocelot”对在64位系统上安装32位库和应用程序包提供“multiarch”支持，因此AMD64计算机能够安装指定的32位软件，其中包括Skype和Flash，而无需额外的兼容性软件支持。</p>
+<p><strong>4****、用户界面改进</strong><br>Ubuntu 11.10“Oneiric  Ocelot”中包含新版Compiz和Unity，为用户带来新的alt+tab切换以及更好的启动器和面板性能。目前，“Places”已经被重命名 为“Lenses”，其中整合了多个来源和先进的过滤选项，例如评级和范围。与此同时，默认情况下，Ubuntu 11.10还安装Banshee  音乐播放器。</p>
+<p><strong>5****、新的应用程序和默认</strong><br>Oneiric Ocelot中包含Thunderbird 为默认邮件客户端，Déjà Dup  作为默认备份工具以及Gwibber作为微博客户端。默认情况下，LightDM作为全新的登录界面，GNOME桌面环境也升级至当前最新的3.1.5 版，最终版将采用GNOME 3.2。与此同时，Ubuntu软件中心则允许用户通过专门的视图搜索顶级的应用程序。</p>
+<p><strong>6****、新内核和构架</strong><br>Ubuntu 11.10中包括新的基于Linux kernel v3.0.3的内核，与此同时，GNU工具链现如今则基于GCC 4.6 for i386、AMD64和ARM OMAP3/OMAP4构架。</p>
+<p><strong>7****、Lubuntu</strong><br>值得一提的是，Lubuntu——一个基于轻量级LXDE桌面的 Ubuntu 变种，现如今加入了  Ubuntu家族。与此同时，Kubuntu、Xubuntu、Edubuntu、Mythbuntu和Ubuntu Studio也加入了Ubuntu  11.10测试版。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/ubuntu/">ubuntu</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu-11-10/" rel="tag">Ubuntu 11.10</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-gnome-3-2-web-application-model"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2011/09/01/gnome-3-2-web-application-model/">GNOME 3.2的Web应用程序模式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2011/09/01/gnome-3-2-web-application-model/" class="article-date">
+	  <time datetime="2011-09-01T15:01:34.000Z" itemprop="datePublished">September 1, 2011</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有一个很酷的功能，在即将发布的GNOME 3.2 增加了创建Web应用程序的模式。实现方式：当您浏览到一个网站，并选择“保存为Web应用程序” – 之后会被提示输入名称和图标，然后就会建立一个类似iPhone的图标：</p>
+<p>然后会有提示告诉你程序创建完成</p>
+<p>之后你就可以看到这个 Epiphany Web App 应用程序了。<br>Web App 模式的特点为：</p>
+<div id="news_content">
+    <li>仅仅保留标题栏这一个 UI 元素。</li>
+    <li>在该模式下不可访问其他域名，如果试图通过点击超链接的方式打开其他站点，其请求将在正常浏览器进程中打开。</li>
+    <li>该域名下的 cookies 将从浏览器配置文件中继承（这样就无需重复输入密码），但其他域名的将是独立的。</li>
+    <li>在独立的进程运行，所以若是正常浏览器进程崩溃了，将不会影响这个 Web App 。</li>
+Web App 和其他本地应用程序一样，可以在 Alt+Tab 的应用程序切换器中出现：
+
+<p>当然也会在应用程序列表中出现了，所以也可以添加到收藏：<br><a target="_blank" rel="noopener" href="http://imcn.me/html/y2011/7413.html/gnomewebapp-dash">
+</a></div></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GNOME/" rel="tag">GNOME</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-wine-1-3-27-released"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2011/08/27/wine-1-3-27-released/">Wine 1.3.27 发布</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2011/08/27/wine-1-3-27-released/" class="article-date">
+	  <time datetime="2011-08-27T14:47:41.000Z" itemprop="datePublished">August 27, 2011</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>WineHQ一款可以让你在Linux平台使用Windows程序的软件，广受大家欢迎。Wine 1.3.27 现已发布，此版本带来的新东西：<br>支持在Direct3D多重采样。Gecko引擎的新版本。<br>改进处理网络代理。最好的MSXML支持。<br>端侧舱单内置库。修复了各种错误。</p>
+<p><strong>下载:</strong><a target="_blank" rel="noopener" href="http://prdownloads.sourceforge.net/wine/wine-1.3.27.tar.bz2">Wine 1.3.27</a><br><strong>下载:</strong><a target="_blank" rel="noopener" href="http://www.winehq.org/news/2011082601">发布日志</a><br><strong>查看:</strong><a target="_blank" rel="noopener" href="http://imcn.me/html/y2011/2096.html">Ubuntu用户安装方法</a></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wine/" rel="tag">Wine</a></li></ul>
+
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/6/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/">Next</a>
+  </nav>
+
+</section>
+          <aside id="sidebar">
+  
+    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>Recent Posts</a></li>
+    </ul>
+    <div class="widget">
+      <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/03/20/mac-os-x-vim-%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8/">mac os x vim 自动补全</a></h6>
+              <span>March 20, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/28/windows10zidongdengluliangzhongpeizhifangfa/">Windows10自动登录两种配置方法</a></h6>
+              <span>March 28, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/23/chazhaowordpresszhumulu/">查找wordpress主目录</a></h6>
+              <span>March 23, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/23/centos-wordpress-shengjiwufajianliwenjian/">centos wordpress 升级无法建立文件</a></h6>
+              <span>March 23, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/23/qingkongdnshuancun/">清空DNS缓存</a></h6>
+              <span>March 23, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/23/panduanxitongbanbenyunxinganzhuangchengxu/">判断系统版本运行安装程序</a></h6>
+              <span>March 23, 2017</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/BAT/">BAT</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/wordpress/">wordpress</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/GOOGLE/">GOOGLE</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">33</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/oracle/">oracle</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL%E6%95%99%E7%A8%8B/">MySQL教程</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL%E6%95%99%E7%A8%8B/PHP%E6%95%99%E7%A8%8B/">PHP教程</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP%E6%95%99%E7%A8%8B/">PHP教程</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/archlinux/">archlinux</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/fedora/">fedora</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/wordpress/">wordpress</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8A%9E%E5%85%AC%E8%BD%AF%E4%BB%B6/">办公软件</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS-6/" rel="tag">CentOS 6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/" rel="tag">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome%E6%94%AF%E6%8C%81C-C/" rel="tag">Chrome支持C/C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Damn-Small-Linux/" rel="tag">Damn Small Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fedora-gnome3-%E5%85%B3%E6%9C%BA%E6%96%B9%E6%B3%95/" rel="tag">Fedora gnome3 关机方法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fedora%E4%B8%8B%E8%BD%BD/" rel="tag">Fedora下载</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GNOME/" rel="tag">GNOME</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Plus-Search/" rel="tag">Google Plus Search</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google+</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LightDM/" rel="tag">LightDM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-3-1/" rel="tag">Linux 3.1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-Kernel-3-0/" rel="tag">Linux Kernel 3.0</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD/" rel="tag">Linux迅雷下载</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-OS-X/" rel="tag">Mac OS X</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-OS-X-Lion/" rel="tag">Mac OS X Lion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL%E6%98%AF%E4%BB%80%E4%B9%88/" rel="tag">MySQL是什么</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oracle%E5%AE%89%E8%A3%85/" rel="tag">Oracle安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP%E5%8F%98%E9%87%8F/" rel="tag">PHP变量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" rel="tag">PHP基本语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QQ%E8%BE%93%E5%85%A5%E6%B3%95/" rel="tag">QQ输入法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RIM/" rel="tag">RIM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Red-Star-2-0/" rel="tag">Red Star 2.0</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tiny-Core-Linux/" rel="tag">Tiny Core Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu-11-10/" rel="tag">Ubuntu 11.10</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">Ubuntu台服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu%E7%A6%BB%E7%BA%BF%E5%8D%87%E7%BA%A7/" rel="tag">Ubuntu离线升级</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware-Workstation/" rel="tag">VMware Workstation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Win7/" rel="tag">Win7</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wine/" rel="tag">Wine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/X-Org/" rel="tag">X.Org</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xenserver/" rel="tag">Xenserver</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/" rel="tag">archlinux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux%E5%AE%89%E8%A3%85/" rel="tag">archlinux安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux%E8%BF%9E%E6%8E%A5wifi/" rel="tag">archlinux连接wifi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/brew/" rel="tag">brew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/centos/" rel="tag">centos</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/centos7/" rel="tag">centos7</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cfdick/" rel="tag">cfdick</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel%E4%BF%9D%E6%8A%A4%E5%AF%86%E7%A0%81/" rel="tag">excel保护密码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fedora/" rel="tag">fedora</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fedora16-%E5%AE%89%E8%A3%85-VMware-Workstation-8-0-2/" rel="tag">fedora16 安装 VMware Workstation 8.0.2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/find/" rel="tag">find</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/" rel="tag">flash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free%E5%91%BD%E4%BB%A4/" rel="tag">free命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fsockopen/" rel="tag">fsockopen</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http%E5%8D%8F%E8%AE%AE/" rel="tag">http协议</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/i3/" rel="tag">i3</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/key/" rel="tag">key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux%E9%87%8A%E6%94%BE%E5%86%85%E5%AD%98/" rel="tag">linux释放内存</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oh-my-zsh/" rel="tag">oh my zsh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/" rel="tag">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle-%E7%9B%91%E5%90%AC/" rel="tag">oracle 监听</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rpm/" rel="tag">rpm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/samba%E5%AE%89%E8%A3%85/" rel="tag">samba安装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/samba%E9%85%8D%E7%BD%AE/" rel="tag">samba配置</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/" rel="tag">svn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat6/" rel="tag">tomcat6</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E4%BF%AE%E6%94%B9root%E5%AF%86%E7%A0%81/" rel="tag">ubuntu修改root密码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E5%BC%95%E5%AF%BC/" rel="tag">ubuntu引导</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E7%A0%B4%E8%A7%A3Windows/" rel="tag">ubuntu破解Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80numlock/" rel="tag">ubuntu自动打开numlock</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wget/" rel="tag">wget</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/whereis%E5%91%BD%E4%BB%A4/" rel="tag">whereis命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/which%E5%91%BD%E4%BB%A4/" rel="tag">which命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/" rel="tag">wordpress</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress%E6%8F%92%E4%BB%B6/" rel="tag">wordpress插件</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yum%E5%AE%89%E8%A3%85crontab/" rel="tag">yum安装crontab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zsh/" rel="tag">zsh</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%B1%E7%A0%81/" rel="tag">乱码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%80%E4%B9%88%E6%98%AFPHP/" rel="tag">什么是PHP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BF%AE%E6%94%B9root%E5%AF%86%E7%A0%81/" rel="tag">修改root密码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3%E6%96%B9%E6%B3%95/" rel="tag">关闭端口方法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E5%8C%BA/" rel="tag">分区</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%A0%E9%99%A4/" rel="tag">删除</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A3%81%E7%BA%B8/" rel="tag">壁纸</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%8D%E5%88%B6/" rel="tag">复制</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83/" rel="tag">如何搭建PHP环境</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/" rel="tag">打印机</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%82%E8%BD%BDwindows%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/" rel="tag">挂载windows共享目录</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2/" rel="tag">搜索</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B0%E5%BB%BA/" rel="tag">新建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E5%94%A4%E9%86%92/" rel="tag">无线局域网唤醒</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E4%BD%B3%E7%9A%84Linux/" rel="tag">最佳的Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%8411%E4%B8%AALinux%E5%8F%91%E8%A1%8C%E7%89%88/" rel="tag">最受欢迎的11个Linux发行版</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3PHP%E5%86%85%E6%A0%B8/" rel="tag">深入理解PHP内核</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A6%81Ping/" rel="tag">禁Ping</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AB%AF%E5%8F%A3/" rel="tag">端口</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/" rel="tag">端口扫描</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC/" rel="tag">系统版本</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%96%E8%BE%91sudo%E6%9D%83%E9%99%90/" rel="tag">编辑sudo权限</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%A9%E5%87%8F%E9%80%BB%E8%BE%91%E5%88%86%E5%8C%BA%E9%94%99%E8%AF%AF/" rel="tag">缩减逻辑分区错误</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%A3%E7%A0%81%E5%99%A8/" rel="tag">解码器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B0%B7%E6%AD%8C%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/" rel="tag">谷歌拼音输入法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9C%E7%A8%8B%E9%87%8D%E8%A3%85/" rel="tag">远程重装</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" rel="tag">阿里云</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 11.67px;">Android</a> <a href="/tags/CentOS-6/" style="font-size: 10px;">CentOS 6</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Chrome%E6%94%AF%E6%8C%81C-C/" style="font-size: 10px;">Chrome支持C/C++</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Damn-Small-Linux/" style="font-size: 10px;">Damn Small Linux</a> <a href="/tags/Fedora-gnome3-%E5%85%B3%E6%9C%BA%E6%96%B9%E6%B3%95/" style="font-size: 10px;">Fedora gnome3 关机方法</a> <a href="/tags/Fedora%E4%B8%8B%E8%BD%BD/" style="font-size: 10px;">Fedora下载</a> <a href="/tags/GNOME/" style="font-size: 10px;">GNOME</a> <a href="/tags/Google-Plus-Search/" style="font-size: 10px;">Google Plus Search</a> <a href="/tags/Google/" style="font-size: 18.33px;">Google+</a> <a href="/tags/LightDM/" style="font-size: 10px;">LightDM</a> <a href="/tags/Linux-3-1/" style="font-size: 10px;">Linux 3.1</a> <a href="/tags/Linux-Kernel-3-0/" style="font-size: 10px;">Linux Kernel 3.0</a> <a href="/tags/Linux%E8%BF%85%E9%9B%B7%E4%B8%8B%E8%BD%BD/" style="font-size: 10px;">Linux迅雷下载</a> <a href="/tags/Mac-OS-X/" style="font-size: 11.67px;">Mac OS X</a> <a href="/tags/Mac-OS-X-Lion/" style="font-size: 10px;">Mac OS X Lion</a> <a href="/tags/MySQL%E6%98%AF%E4%BB%80%E4%B9%88/" style="font-size: 10px;">MySQL是什么</a> <a href="/tags/Oracle%E5%AE%89%E8%A3%85/" style="font-size: 10px;">Oracle安装</a> <a href="/tags/PHP%E5%8F%98%E9%87%8F/" style="font-size: 10px;">PHP变量</a> <a href="/tags/PHP%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">PHP基本语法</a> <a href="/tags/QQ%E8%BE%93%E5%85%A5%E6%B3%95/" style="font-size: 10px;">QQ输入法</a> <a href="/tags/RIM/" style="font-size: 10px;">RIM</a> <a href="/tags/Red-Star-2-0/" style="font-size: 10px;">Red Star 2.0</a> <a href="/tags/Tiny-Core-Linux/" style="font-size: 10px;">Tiny Core Linux</a> <a href="/tags/Ubuntu/" style="font-size: 16.67px;">Ubuntu</a> <a href="/tags/Ubuntu-11-10/" style="font-size: 13.33px;">Ubuntu 11.10</a> <a href="/tags/Ubuntu%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">Ubuntu台服务器</a> <a href="/tags/Ubuntu%E7%A6%BB%E7%BA%BF%E5%8D%87%E7%BA%A7/" style="font-size: 10px;">Ubuntu离线升级</a> <a href="/tags/VMware-Workstation/" style="font-size: 10px;">VMware Workstation</a> <a href="/tags/Win7/" style="font-size: 10px;">Win7</a> <a href="/tags/Wine/" style="font-size: 10px;">Wine</a> <a href="/tags/X-Org/" style="font-size: 10px;">X.Org</a> <a href="/tags/Xenserver/" style="font-size: 10px;">Xenserver</a> <a href="/tags/archlinux/" style="font-size: 10px;">archlinux</a> <a href="/tags/archlinux%E5%AE%89%E8%A3%85/" style="font-size: 10px;">archlinux安装</a> <a href="/tags/archlinux%E8%BF%9E%E6%8E%A5wifi/" style="font-size: 10px;">archlinux连接wifi</a> <a href="/tags/brew/" style="font-size: 10px;">brew</a> <a href="/tags/centos/" style="font-size: 11.67px;">centos</a> <a href="/tags/centos7/" style="font-size: 13.33px;">centos7</a> <a href="/tags/cfdick/" style="font-size: 10px;">cfdick</a> <a href="/tags/excel%E4%BF%9D%E6%8A%A4%E5%AF%86%E7%A0%81/" style="font-size: 10px;">excel保护密码</a> <a href="/tags/fedora/" style="font-size: 10px;">fedora</a> <a href="/tags/fedora16-%E5%AE%89%E8%A3%85-VMware-Workstation-8-0-2/" style="font-size: 10px;">fedora16 安装 VMware Workstation 8.0.2</a> <a href="/tags/find/" style="font-size: 10px;">find</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/free%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">free命令</a> <a href="/tags/fsockopen/" style="font-size: 10px;">fsockopen</a> <a href="/tags/http%E5%8D%8F%E8%AE%AE/" style="font-size: 10px;">http协议</a> <a href="/tags/i3/" style="font-size: 13.33px;">i3</a> <a href="/tags/key/" style="font-size: 10px;">key</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/linux%E9%87%8A%E6%94%BE%E5%86%85%E5%AD%98/" style="font-size: 10px;">linux释放内存</a> <a href="/tags/oh-my-zsh/" style="font-size: 10px;">oh my zsh</a> <a href="/tags/oracle/" style="font-size: 11.67px;">oracle</a> <a href="/tags/oracle-%E7%9B%91%E5%90%AC/" style="font-size: 10px;">oracle 监听</a> <a href="/tags/rpm/" style="font-size: 10px;">rpm</a> <a href="/tags/samba%E5%AE%89%E8%A3%85/" style="font-size: 10px;">samba安装</a> <a href="/tags/samba%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">samba配置</a> <a href="/tags/svn/" style="font-size: 10px;">svn</a> <a href="/tags/tomcat6/" style="font-size: 13.33px;">tomcat6</a> <a href="/tags/ubuntu%E4%BF%AE%E6%94%B9root%E5%AF%86%E7%A0%81/" style="font-size: 10px;">ubuntu修改root密码</a> <a href="/tags/ubuntu%E5%BC%95%E5%AF%BC/" style="font-size: 10px;">ubuntu引导</a> <a href="/tags/ubuntu%E7%A0%B4%E8%A7%A3Windows/" style="font-size: 10px;">ubuntu破解Windows</a> <a href="/tags/ubuntu%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80numlock/" style="font-size: 10px;">ubuntu自动打开numlock</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/whereis%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">whereis命令</a> <a href="/tags/which%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">which命令</a> <a href="/tags/wordpress/" style="font-size: 15px;">wordpress</a> <a href="/tags/wordpress%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">wordpress插件</a> <a href="/tags/yum%E5%AE%89%E8%A3%85crontab/" style="font-size: 10px;">yum安装crontab</a> <a href="/tags/zsh/" style="font-size: 11.67px;">zsh</a> <a href="/tags/%E4%B9%B1%E7%A0%81/" style="font-size: 10px;">乱码</a> <a href="/tags/%E4%BB%80%E4%B9%88%E6%98%AFPHP/" style="font-size: 10px;">什么是PHP</a> <a href="/tags/%E4%BF%AE%E6%94%B9root%E5%AF%86%E7%A0%81/" style="font-size: 10px;">修改root密码</a> <a href="/tags/%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3%E6%96%B9%E6%B3%95/" style="font-size: 10px;">关闭端口方法</a> <a href="/tags/%E5%88%86%E5%8C%BA/" style="font-size: 10px;">分区</a> <a href="/tags/%E5%88%A0%E9%99%A4/" style="font-size: 10px;">删除</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 10px;">壁纸</a> <a href="/tags/%E5%A4%8D%E5%88%B6/" style="font-size: 10px;">复制</a> <a href="/tags/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAPHP%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">如何搭建PHP环境</a> <a href="/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/" style="font-size: 10px;">打印机</a> <a href="/tags/%E6%8C%82%E8%BD%BDwindows%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/" style="font-size: 10px;">挂载windows共享目录</a> <a href="/tags/%E6%90%9C%E7%B4%A2/" style="font-size: 10px;">搜索</a> <a href="/tags/%E6%96%B0%E5%BB%BA/" style="font-size: 10px;">新建</a> <a href="/tags/%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E5%94%A4%E9%86%92/" style="font-size: 10px;">无线局域网唤醒</a> <a href="/tags/%E6%9C%80%E4%BD%B3%E7%9A%84Linux/" style="font-size: 10px;">最佳的Linux</a> <a href="/tags/%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%8411%E4%B8%AALinux%E5%8F%91%E8%A1%8C%E7%89%88/" style="font-size: 10px;">最受欢迎的11个Linux发行版</a> <a href="/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3PHP%E5%86%85%E6%A0%B8/" style="font-size: 10px;">深入理解PHP内核</a> <a href="/tags/%E7%A6%81Ping/" style="font-size: 10px;">禁Ping</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%AB%AF%E5%8F%A3/" style="font-size: 10px;">端口</a> <a href="/tags/%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/" style="font-size: 10px;">端口扫描</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC/" style="font-size: 10px;">系统版本</a> <a href="/tags/%E7%BC%96%E8%BE%91sudo%E6%9D%83%E9%99%90/" style="font-size: 10px;">编辑sudo权限</a> <a href="/tags/%E7%BC%A9%E5%87%8F%E9%80%BB%E8%BE%91%E5%88%86%E5%8C%BA%E9%94%99%E8%AF%AF/" style="font-size: 10px;">缩减逻辑分区错误</a> <a href="/tags/%E8%A7%A3%E7%A0%81%E5%99%A8/" style="font-size: 10px;">解码器</a> <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/" style="font-size: 10px;">谷歌拼音输入法</a> <a href="/tags/%E8%BF%9C%E7%A8%8B%E9%87%8D%E8%A3%85/" style="font-size: 10px;">远程重装</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 10px;">阿里云</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/03/">March 2011</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 开源百科 All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              <a href=https://beian.miit.gov.cn target="_blank">粤ICP备14030059号</a>
+            </span>
+          
+      </div>
+
+
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/scripts.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
